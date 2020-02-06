@@ -59,6 +59,19 @@ public class NumbersToWords {
 
 		    return result.toString();
 		  }
+	  private void appendThousands(final Integer thousands) throws BusinessException {
+		    if (thousands > 0) {
+		      NumbersToWords thousandsConvertor = new NumbersToWords(thousands);
+		      append(thousandsConvertor.convert() + " thousand");
+		    }
+		  }
+
+		  private void appendHundreds(final Integer hundreds) {
+		    if (hundreds > 0) {
+		      append(NUMBERS_UP_TO_19[hundreds] + " hundred");
+		    }
+		  }
+
 	  private void appendTensAndUnits(final Integer tensAndUnits) {
 		    if (tensAndUnits > 0 || result.length() == 0) {
 		      appendWithAnd(convertTensAndUnits(tensAndUnits));
