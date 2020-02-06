@@ -59,6 +59,13 @@ public class NumbersToWords {
 
 		    return result.toString();
 		  }
+	  private void appendMillions(final Integer millions) throws BusinessException {
+		    if (millions > 0) {
+		      NumbersToWords millionsConvertor = new NumbersToWords(millions);
+		      append(millionsConvertor.convert() + " million");
+		    }
+		  }
+
 	  private void appendThousands(final Integer thousands) throws BusinessException {
 		    if (thousands > 0) {
 		      NumbersToWords thousandsConvertor = new NumbersToWords(thousands);
