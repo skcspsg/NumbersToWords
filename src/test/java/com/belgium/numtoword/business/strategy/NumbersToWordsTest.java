@@ -57,6 +57,12 @@ public class NumbersToWordsTest {
 	    expectConversion(80, "eighty");
 	    expectConversion(90, "ninety");
 	  }
+	@Test
+	  public void convertsArbitraryTwoDigitNumbers() {
+	    expectConversion(42, "forty-two");
+	    expectConversion(69, "sixty-nine");
+	  }
+
 
 
 }
