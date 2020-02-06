@@ -21,5 +21,20 @@ public class ConverterImplTest {
     public void init() {
         MockitoAnnotations.initMocks(this);
     }
-     
+     @Test
+    public void processTest() throws BusinessException
+    {
+    	converterImpl.process(12345);
+    }
+     @Rule
+     public ExpectedException exceptionRule = ExpectedException.none();
+      
+     @Test
+     public void whenExceptionThrown_thenRuleIsApplied() throws BusinessException {
+         exceptionRule.expect(BusinessException.class);
+         exceptionRule.expectMessage("Limit is 6 digit exit");
+         converterImpl.process(1234567);
+     }
+
+
 }
