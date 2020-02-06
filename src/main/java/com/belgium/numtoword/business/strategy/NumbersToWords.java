@@ -28,6 +28,21 @@ public class NumbersToWords {
 	  public NumbersToWords(final Integer number) {
 	    this.number = number;
 	  }
+	  public String convert() throws BusinessException {
+		    if (number > 999999) {
+		      throw new BusinessException("Limit is 6 digit exit");
+		    }
+
+		    final Integer millions = number / 1000000;
+		    Integer remainder = number % 1000000;
+		    final Integer thousands = remainder / 1000;
+		    remainder = remainder % 1000;
+		    final Integer hundreds = remainder / 100;
+		    final Integer tensAndUnits = remainder % 100;
+
+		   
+		    return result.toString();
+		  }
 
 }
 
