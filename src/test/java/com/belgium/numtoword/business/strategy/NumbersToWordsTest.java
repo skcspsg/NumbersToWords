@@ -97,6 +97,10 @@ public class NumbersToWordsTest {
 	    expectConversion(10020, "ten thousand and twenty");
 	    expectConversion(12300, "twelve thousand three hundred");
 	  }
+	@Test(expected = BusinessException.class)
+	  public void rejectsNumbersOver999999() throws BusinessException {
+	    NumbersToWords.convert(1000000);
+	  }
 
 
 
