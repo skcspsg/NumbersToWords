@@ -101,6 +101,14 @@ public class NumbersToWordsTest {
 	  public void rejectsNumbersOver999999() throws BusinessException {
 	    NumbersToWords.convert(1000000);
 	  }
+	private void expectConversion(final int number, final String expectedWords) {
+	    try {
+			assertEquals(expectedWords, NumbersToWords.convert(number));
+		} catch (BusinessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	  }
 
 
 
