@@ -67,6 +67,12 @@ public class NumbersToWordsTest {
 	    expectConversion(100, "one hundred");
 	    expectConversion(300, "three hundred");
 	  }
+	@Test
+	  public void convertsArbitraryThreeDigitNumbers() {
+	    expectConversion(123, "one hundred and twenty-three");
+	    expectConversion(360, "three hundred and sixty");
+	    expectConversion(501, "five hundred and one");
+	  }
 
 
 
