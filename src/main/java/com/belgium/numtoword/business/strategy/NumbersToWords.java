@@ -59,6 +59,27 @@ public class NumbersToWords {
 
 		    return result.toString();
 		  }
+	  private void appendTensAndUnits(final Integer tensAndUnits) {
+		    if (tensAndUnits > 0 || result.length() == 0) {
+		      appendWithAnd(convertTensAndUnits(tensAndUnits));
+		    }
+		  }
+
+		  private void append(final String words) {
+		    appendWithSeparator(words, " ");
+		  }
+
+		  private void appendWithAnd(final String words) {
+		    appendWithSeparator(words, " and ");
+		  }
+
+		  private void appendWithSeparator(final String words, final String separator) {
+		    if (result.length() > 0) {
+		      result.append(separator);
+		    }
+		    result.append(words);
+		  }
+
 	  private String convertTensAndUnits(final Integer number) {
 		    final Integer tens = number / 10;
 		    final Integer units = number - tens * 10;
