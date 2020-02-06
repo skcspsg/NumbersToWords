@@ -111,7 +111,7 @@ public class NumbersToWordsTest {
 		expectConversion(12300, "twelve thousand three hundred");
 	}
 
-	@Rule
+	/*@Rule
 	public ExpectedException exceptionRule = ExpectedException.none();
 
 	@Test
@@ -120,7 +120,7 @@ public class NumbersToWordsTest {
 		exceptionRule.expect(BusinessException.class);
 		exceptionRule.expectMessage("Limit is 6 digit exit");
 		NumbersToWords.convert(10000001);
-	}
+	}*/
 
 	private void expectConversion(final int number, final String expectedWords) {
 		try {
