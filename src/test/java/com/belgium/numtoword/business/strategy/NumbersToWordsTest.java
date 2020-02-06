@@ -17,5 +17,9 @@ import com.belgium.numtoword.business.exception.BusinessException;
 @SpringBootTest
 public class NumbersToWordsTest {
 
-  
+	@Test
+	  public void convertsZero() {
+	    expectConversion(0, "zero");
+	  }
+
 }

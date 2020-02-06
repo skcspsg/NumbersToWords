@@ -16,5 +16,9 @@ import com.belgium.numtoword.business.strategy.NumbersToWords;
 @Component
 public class ConverterImpl implements Converter {
 	
-	
+	public String process(Integer param) throws BusinessException{
+
+		return NumbersToWords.convert(param);
+	}
+
 }
