@@ -78,6 +78,14 @@ public class NumbersToWordsTest {
 	    expectConversion(4000, "four thousand");
 	    expectConversion(9000, "nine thousand");
 	  }
+	@Test
+	  public void convertsArbitraryFourDigitNumbers() {
+	    expectConversion(1234, "one thousand two hundred and thirty-four");
+	    expectConversion(9600, "nine thousand six hundred");
+	    expectConversion(2050, "two thousand and fifty");
+	    expectConversion(7008, "seven thousand and eight");
+	  }
+
 
 
 
