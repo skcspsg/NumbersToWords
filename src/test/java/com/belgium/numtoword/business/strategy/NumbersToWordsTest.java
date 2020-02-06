@@ -73,6 +73,11 @@ public class NumbersToWordsTest {
 	    expectConversion(360, "three hundred and sixty");
 	    expectConversion(501, "five hundred and one");
 	  }
+	@Test
+	  public void convertsThousands() {
+	    expectConversion(4000, "four thousand");
+	    expectConversion(9000, "nine thousand");
+	  }
 
 
 
