@@ -46,5 +46,17 @@ public class NumbersToWordsTest {
 	    expectConversion(18, "eighteen");
 	    expectConversion(19, "nineteen");
 	  }
+	@Test
+	  public void convertsMultiplesOfTenUpToNinety() {
+	    expectConversion(20, "twenty");
+	    expectConversion(30, "thirty");
+	    expectConversion(40, "forty");
+	    expectConversion(50, "fifty");
+	    expectConversion(60, "sixty");
+	    expectConversion(70, "seventy");
+	    expectConversion(80, "eighty");
+	    expectConversion(90, "ninety");
+	  }
+
 
 }
