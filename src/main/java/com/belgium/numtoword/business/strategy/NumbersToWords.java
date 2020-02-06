@@ -52,7 +52,10 @@ public class NumbersToWords {
 		        final Integer hundreds = remainder / 100;
 		        final Integer tensAndUnits = remainder % 100;
 
-		        
+		        appendMillions(millions);
+		        appendThousands(thousands);
+		        appendHundreds(hundreds);
+		        appendTensAndUnits(tensAndUnits);
 		        appendTensAndUnits(tensAndUnits);
 		        return result.toString();
 		      }
