@@ -62,6 +62,11 @@ public class NumbersToWordsTest {
 	    expectConversion(42, "forty-two");
 	    expectConversion(69, "sixty-nine");
 	  }
+	@Test
+	  public void convertsHundreds() {
+	    expectConversion(100, "one hundred");
+	    expectConversion(300, "three hundred");
+	  }
 
 
 
